@@ -1,23 +1,14 @@
-let num;
-let arr = new Array();
-function randomNum()
+let num=7;
+let factor=1;
+let factorArr = new Array();
+while(factor<=num)
 {
-    return Math.floor(Math.random()*900)+100;
+    if(num%factor == 0)
+    {
+        factorArr.push(factor);
+        num=num/factor;
+    }
+    factor=factor+1;
 }
-for(i=0;i<10;i++)
-{
-    arr.push(randomNum());
-}
-size = arr.length;
-for(i=0;i<arr.length;i++)
-{
-    console.log(arr[i]);
-}
-console.log("Sorted array is:");
-arr.sort();
-for(i=0;i<arr.length;i++)
-{
-    console.log(arr[i]);
-}
-console.log("Second smallest number in the array is: ");
-console.log(arr[1]);
+console.log("Prime factors are:");
+console.log(factorArr);
