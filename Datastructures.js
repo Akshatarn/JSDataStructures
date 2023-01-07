@@ -19,5 +19,5 @@ for(i=0;i<arr.length;i++)
 {
     console.log(arr[i]);
 }
-console.log("Second largest number in the array is: ");
-console.log(arr[size-2]);
+console.log("Second smallest number in the array is: ");
+console.log(arr[1]);
