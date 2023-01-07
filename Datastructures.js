@@ -1,14 +1,18 @@
-let num=7;
-let factor=1;
-let factorArr = new Array();
-while(factor<=num)
+let arr = [0, -1, 2, -3, 1];
+for(i=0;i<arr.length;i++)
 {
-    if(num%factor == 0)
+    for(j=i+1;j<arr.length;j++)
     {
-        factorArr.push(factor);
-        num=num/factor;
+        for(k=j+1;k<arr.length;k++)
+        {
+            if(arr[i]+arr[j]+arr[k]==0)
+            {
+                console.log("Number are:");
+                console.log(arr[i]);
+                console.log(arr[j]);
+                console.log(arr[k]);
+                break;
+            }
+        }
     }
-    factor=factor+1;
 }
-console.log("Prime factors are:");
-console.log(factorArr);
