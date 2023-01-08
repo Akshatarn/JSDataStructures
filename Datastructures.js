@@ -1,18 +1,10 @@
-let arr = [0, -1, 2, -3, 1];
-for(i=0;i<arr.length;i++)
+let arr = new Array();
+let i,n=100;
+for(i=1;i<n;i++)
 {
-    for(j=i+1;j<arr.length;j++)
+    if(i%11==0)
     {
-        for(k=j+1;k<arr.length;k++)
-        {
-            if(arr[i]+arr[j]+arr[k]==0)
-            {
-                console.log("Number are:");
-                console.log(arr[i]);
-                console.log(arr[j]);
-                console.log(arr[k]);
-                break;
-            }
-        }
+        arr.push(i);
     }
 }
+console.log("Repeated numbers are:"+arr);
