@@ -1,88 +1,69 @@
-let map = new Map();
-let maxCount=10;
-let oneCount=0,twoCount=0,threeCount=0,fourCount=0,fiveCount=0,sixCount=0;
-bool = true;
-while(bool)
+const MAX_COUNT  = 50;
+let count = 0;
+let janCount = 0,febCount = 0,marchCount = 0,aprilCount = 0,mayCount = 0,juneCount = 0,julyCount = 0,augustCount = 0,septCount = 0,octCount = 0,novCount = 0,decCount = 0;
+while(true)
 {
-    let rand = Math.floor(Math.random()*6+1);
-    switch(rand)
-    {
-        case 1:
-            if(oneCount == maxCount)
-            {
-                bool = false;
-            }
-            else
-            {
-                oneCount++;
-            }
+        if(count == MAX_COUNT)
+        {
             break;
-        case 2:
-            if(twoCount == maxCount)
-            {
-                bool = false;
-            }
-            else
-            {
-                twoCount++;
-            }
-            break;
-        case 3:
-            if(threeCount == maxCount)
-            {
-                bool = false;
-            }
-            else
-            {
-                threeCount++;
-            }
-            break;
-        case 4:
-            if(fourCount == maxCount)
-            {
-                bool = false;
-            }
-            else
-            {
-                fourCount++;
-            }
-            break;
-        case 5:
-            if(fiveCount == maxCount)
-            {
-                bool = false;
-            }
-            else
-            {
-                fiveCount++;
-            }
-            break;
-        case 6:
-            if(sixCount == maxCount)
-            {
-                bool = false;
-            }
-            else
-            {
-                sixCount++;
-            }
-            break;      
-            
+        }
+        let randomBirthMonth = Math.floor(Math.random() * 12 + 1);
+        switch (randomBirthMonth) 
+        {
+            case 1:
+                janCount++;
+                break;
+            case 2:
+                febCount++;
+                break;
+            case 3:
+                marchCount++;
+                break;
+            case 4:
+                aprilCount++;
+                break;
+            case 5:
+                mayCount++;
+                break;
+            case 6:
+                juneCount++;
+                break;
+            case 7:
+                julyCount++;
+                break;
+            case 8:
+                augustCount++;
+                break;
+            case 9:
+                septCount++;
+                break;
+            case 10:
+                octCount++;
+                break;
+            case 11:
+                novCount++;
+                break;
+            case 12:
+                decCount++;
+                break;
+            default:
+                break;
+        }
+        count++;
     }
-}
-map.set(1,oneCount);
-map.set(2,twoCount);
-map.set(3,threeCount);
-map.set(4,fourCount);
-map.set(5,fiveCount);
-map.set(6,sixCount);
-console.log(map)
+    let mapOfBirhDayMonths = new Map();
+    mapOfBirhDayMonths.set(1,janCount);
+    mapOfBirhDayMonths.set(2,febCount);
+    mapOfBirhDayMonths.set(3,marchCount);
+    mapOfBirhDayMonths.set(4,aprilCount);
+    mapOfBirhDayMonths.set(5,mayCount);
+    mapOfBirhDayMonths.set(6,juneCount);
+    mapOfBirhDayMonths.set(7,julyCount);
+    mapOfBirhDayMonths.set(8,augustCount);
+    mapOfBirhDayMonths.set(9,septCount);
+    mapOfBirhDayMonths.set(10,octCount);
+    mapOfBirhDayMonths.set(11,novCount);
+    mapOfBirhDayMonths.set(12,decCount);
 
-let minTimes = Math.min(...map.values());
-let maxTimes = Math.max(...map.values());
-function getKey(values)
-{
-    return[...map].find(([key,val])=>val==value)
-}
-console.log("Maximum Times is :"+getKey(maxTimes));
-console.log("Minimum Times is :"+getKey(minTimes));
+    console.log("The birth month of 50 individuals are :");
+    console.log(mapOfBirhDayMonths);
